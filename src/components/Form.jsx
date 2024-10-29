@@ -14,7 +14,7 @@ function Form(props) {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="flex flex-col items-center ">
       <h2 className="label-wrapper">
         <label htmlFor="new-todo-input" className="label__lg">
           What needs to be done?
@@ -23,13 +23,13 @@ function Form(props) {
       <input
         type="text"
         id="new-todo-input"
-        className="input input__lg"
+        className=" m-2 p-4 w-full border border-gray-300 rounded-md "
         name="text"
         autoComplete="off"
         value={name}
         onChange={handleChange}
       />
-      <button type="submit" className="btn btn__primary btn__lg">
+      <button type="submit" className="w-full m-3 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
         Add
       </button>
     </form>
